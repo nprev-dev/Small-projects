@@ -1,4 +1,9 @@
 import random
+# to add later:
+# - History system
+# - Grade system (in %) and maybe show mistakes
+# - chose how many questions u want (with an all option)
+
 
 # ---------- Dicts ---------- #
 hira_main = {
@@ -46,7 +51,13 @@ kana_main = {
     "ラ": "ra", "レ": "re", "リ": "ri", "ロ": "ro", "ル": "ru",   # R row
     "ワ": "wa", "ヲ": "wo", "ン": "n"                             # W row + N
 }
-kana_dakuten = {}
+kana_dakuten = {
+    "ガ": "ga", "ゲ": "ge", "ギ": "gi", "ゴ": "go", "グ": "gu", # G row (K -> G)
+    "ザ": "za", "ゼ": "ze", "ジ": "ji", "ゾ": "zo", "ズ": "zu", # Z row (S -> Z)
+    "ダ": "da", "デ": "de", "ヂ": "ji", "ド": "do", "ヅ": "zu", # D row (T -> D)
+    "バ": "ba", "ベ": "be", "ビ": "bi", "ボ": "bo", "ブ": "bu", # B row (H -> B)
+    "パ": "pa", "ペ": "pe", "ピ": "pi", "ポ": "po", "プ": "pu"  # P row (H -> P) Handakuten
+}
 kana_combi = {}
 
 # ---------- Workers ---------- #
