@@ -3,6 +3,7 @@ import random
 # - History system
 # - Grade system (in %) and maybe show mistakes
 # - chose how many questions u want (with an all option)
+# - Add grammar rules (small tsu, long vowels, combination explication etc, maybe later add tips on how to learn)
 
 
 # ---------- Dicts ---------- #
@@ -58,7 +59,20 @@ kana_dakuten = {
     "バ": "ba", "ベ": "be", "ビ": "bi", "ボ": "bo", "ブ": "bu", # B row (H -> B)
     "パ": "pa", "ペ": "pe", "ピ": "pi", "ポ": "po", "プ": "pu"  # P row (H -> P) Handakuten
 }
-kana_combi = {}
+kana_combi = {
+    "キャ": "kya", "キョ": "kyo", "キュ": "kyu", # K row
+    "ギャ": "gya", "ギョ": "gyo", "ギュ": "gyu", # G row
+    "シャ": "sha", "ショ": "sho", "シュ": "shu", # S row *SPECIAL
+    "ジャ": "ja", "ジョ": "jo", "ジュ": "ju",    # Z row *SPECIAL
+    "チャ": "cha", "チョ": "cho", "チュ": "chu", # T row *SPECIAL
+    "ヂャ": "ja", "ヂョ": "jo", "ヂュ": "ju",    # D row *SPECIAL
+    "ニャ": "nya", "ニョ": "nyo", "ニュ": "nyu", # N row
+    "ヒャ": "hya", "ヒョ": "hyo", "ヒュ": "hyu", # H row
+    "ビャ": "bya", "ビョ": "byo", "ビュ": "byu", # B row
+    "ピャ": "pya", "ピョ": "pyo", "ピュ": "pyu", # P row
+    "ミャ": "mya", "ミョ": "myo", "ミュ": "myu", # M row
+    "リャ": "rya", "リョ": "ryo", "リュ": "ryu"  # R row
+}
 
 # ---------- Workers ---------- #
 
