@@ -1,5 +1,6 @@
 import random
 # to add later:
+# - Add linguo help (gojūon, kana, hiragana katakana and etc)
 # - History system
 # - Grade system (in %) and maybe show mistakes
 # - chose how many questions u want (with an all option)
@@ -40,7 +41,7 @@ hira_combi = {
     "みゃ": "mya", "みゅ": "myu", "みょ": "myo", # M row
     "りゃ": "rya", "りゅ": "ryu", "りょ": "ryo"  # R row
 }
-kana_main = {
+kata_main = {
     "ア": "a", "エ": "e", "イ": "i", "オ": "o", "ウ": "u",        # Vowels
     "カ": "ka", "ケ": "ke", "キ": "ki", "コ": "ko", "ク": "ku",   # K row
     "サ": "sa", "セ": "se", "シ": "shi", "ソ": "so", "ス": "su",  # S row
@@ -52,14 +53,14 @@ kana_main = {
     "ラ": "ra", "レ": "re", "リ": "ri", "ロ": "ro", "ル": "ru",   # R row
     "ワ": "wa", "ヲ": "wo", "ン": "n"                             # W row + N
 }
-kana_dakuten = {
+kata_dakuten = {
     "ガ": "ga", "ゲ": "ge", "ギ": "gi", "ゴ": "go", "グ": "gu", # G row (K -> G)
     "ザ": "za", "ゼ": "ze", "ジ": "ji", "ゾ": "zo", "ズ": "zu", # Z row (S -> Z)
     "ダ": "da", "デ": "de", "ヂ": "ji", "ド": "do", "ヅ": "zu", # D row (T -> D)
     "バ": "ba", "ベ": "be", "ビ": "bi", "ボ": "bo", "ブ": "bu", # B row (H -> B)
     "パ": "pa", "ペ": "pe", "ピ": "pi", "ポ": "po", "プ": "pu"  # P row (H -> P) Handakuten
 }
-kana_combi = {
+kata_combi = {
     "キャ": "kya", "キョ": "kyo", "キュ": "kyu", # K row
     "ギャ": "gya", "ギョ": "gyo", "ギュ": "gyu", # G row
     "シャ": "sha", "ショ": "sho", "シュ": "shu", # S row *SPECIAL
@@ -76,80 +77,81 @@ kana_combi = {
 
 # ---------- Workers ---------- #
 
-def hiragana_kana():
+def hiragana_gojūon():
     pass
 def hiragana_dakuten():
     pass
 def hiragana_combi():
     pass
 def hiragana_both():
+    hira_both = hira_main | hira_dakuten
+def hiragana_kana():
     pass
-def hiragana_all():
-    pass
-def katakana_kana():
+def katakana_gojūon():
     pass
 def katakana_dakuten():
     pass
 def katakana_combi():
     pass
 def katakana_both():
-    pass
-def katakana_all():
+    kata_both = kata_main | kata_dakuten
+def katakana_kana():
     pass
 def hira_and_kata():
     pass
 def stop_prog():
-    pass
+    print("Stopping program!")
+    exit()
 
 # ---------- Choice select -------- #
 question_choice = {
     "1": {
-        "name": "Hiragana",
+        "name": "Hiragana set",
         "options": {
             "1": {
-                "name": "All main Kana",
-                "worker": hiragana_kana
+                "name": "All Hiragana Gojūon",
+                "worker": hiragana_gojūon
             },
             "2": {
-                "name": "All main Dakuten",
+                "name": "All Hiragana Dakuten",
                 "worker": hiragana_dakuten
             },
             "3": {
-                "name": "All main Combinations",
+                "name": "All Hiragana Combinations",
                 "worker": hiragana_combi
             },
             "4": {
-                "name": "All main Kana + Dakuten",
+                "name": "All Hiragana Gojūon + Dakuten",
                 "worker": hiragana_both
             },
             "5": {
                 "name": "Everything",
-                "worker": hiragana_all
+                "worker": hiragana_kana
             }
         }
     },
     "2": {
-        "name": "Katakana",
+        "name": "Katakana set",
         "options": {
             "1": {
-                "name": "All main Kana",
-                "worker": katakana_kana
+                "name": "All Katakana Gojūon",
+                "worker": katakana_gojūon
             },
             "2": {
-                "name": "All main Dakuten",
+                "name": "All Katakana Dakuten",
                 "worker": katakana_dakuten
             },
             "3": {
-                "name": "All main Combinations",
+                "name": "All Katakana Combinations",
                 "worker": katakana_combi
             },
             "4": {
-                "name": "All main Kana + Dakuten",
+                "name": "All Katakana Gojūon + Dakuten",
                 "worker": katakana_both
             },
             "5": {
                 "name": "Everything",
-                "worker": katakana_all
+                "worker": katakana_kana
             }
         }
     },
