@@ -1,6 +1,6 @@
 import random
 
-# ---------- Workers ---------- #
+# ---------- Dicts ---------- #
 hira_main = {
     "あ": "a", "い": "i", "う": "u", "え": "e", "お": "o",        # Vowels
     "か": "ka", "き": "ki", "く": "ku", "け": "ke", "こ": "ko",   # K row
@@ -18,12 +18,27 @@ hira_dakuten = {
     "ざ": "za", "じ": "ji", "ず": "zu", "ぜ": "ze", "ぞ": "zo", # Z row (S -> Z)
     "だ": "da", "ぢ": "ji", "づ": "zu", "で": "de", "ど": "do", # D row (T -> D)
     "ば": "ba", "び": "bi", "ぶ": "bu", "べ": "be", "ぼ": "bo", # B row (H -> B)
-    "ぱ": "pa", "ぴ": "pi", "ぷ": "pu", "ぺ": "pe", "ぽ": "po" # P row (H -> P) Handakuten
+    "ぱ": "pa", "ぴ": "pi", "ぷ": "pu", "ぺ": "pe", "ぽ": "po"  # P row (H -> P) Handakuten
 }
-hira_combi = {}
+hira_combi = {
+    "きゃ": "kya", "きゅ": "kyu", "きょ": "kyo", # K row
+    "ぎゃ": "gya", "ぎゅ": "gyu", "ぎょ": "gyo", # G row
+    "しゃ": "sha", "しゅ": "shu", "しょ": "sho", # S row
+    "じゃ": "ja", "じゅ": "ju", "じょ": "jo",    # Z row
+    "ちゃ": "cha", "ちゅ": "chu", "ちょ": "cho", # T row
+    "ぢゃ": "ja", "ぢゅ": "ju", "ぢょ": "jo",    # D row
+    "にゃ": "nya", "にゅ": "nyu", "にょ": "nyo", # N row
+    "ひゃ": "hya", "ひゅ": "hyu", "ひょ": "hyo", # H row
+    "びゃ": "bya", "びゅ": "byu", "びょ": "byo", # B row
+    "ぴゃ": "pya", "ぴゅ": "pyu", "ぴょ": "pyo", # P row
+    "みゃ": "mya", "みゅ": "myu", "みょ": "myo", # M row
+    "りゃ": "rya", "りゅ": "ryu", "りょ": "ryo"  # R row
+}
 kana_main = {}
 kana_dakuten = {}
 kana_combi = {}
+
+# ---------- Workers ---------- #
 
 def hiragana_kana():
     pass
