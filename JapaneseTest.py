@@ -85,14 +85,11 @@ def hiragana_gojūon():
             continue
         elif num_ques <= len(hira_main):
             break
-     
     wrong = 0 # nb wrong answer
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(hira_main.items()), num_ques)
     for index, (jp, en) in enumerate(selected, start=1):
-        if count >= num_ques:                                #question limit
-            break
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
             if answer == en:
@@ -109,7 +106,33 @@ def hiragana_gojūon():
                 print("Try again")
                 wrong += 1
 def hiragana_dakuten():
-    pass
+    while True:
+        num_ques = num_questions()
+        if num_ques > len(hira_dakuten):
+            print(f"Number is bigger than question pool, enter a number between 1 and {len(hira_dakuten)}.")
+            continue
+        elif num_ques <= len(hira_dakuten):
+            break
+    wrong = 0 # nb wrong answer
+    right = 0 # nb right answer
+    count = 0 # current amount of questions asked 
+    selected = random.sample(list(hira_dakuten.items()), num_ques)
+    for index, (jp, en) in enumerate(selected, start=1):
+        while True:                                            # loop till right answer
+            answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
+            if answer == en:
+                print("Correct")
+                right += 1             # to later implement rating 
+                break
+            elif answer == "skip":
+                print("Skipping")        # later add score penalty will be applied to message
+                wrong += 1
+                break
+            elif answer == "quit":
+                exit()
+            else:
+                print("Try again")
+                wrong += 1
 def hiragana_combi():
     pass
 def hiragana_both():
