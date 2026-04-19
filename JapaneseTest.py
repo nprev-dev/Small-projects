@@ -305,6 +305,33 @@ def katakana_combi():
                 wrong += 1
 def katakana_both():
     kata_both = kata_main | kata_dakuten
+    while True:
+        num_ques = num_questions()
+        if num_ques > len(kata_both):
+            print(f"Number is bigger than question pool, enter a number between 1 and {len(kata_both)}.")
+            continue
+        elif num_ques <= len(kata_both):
+            break
+    wrong = 0 # nb wrong answer
+    right = 0 # nb right answer
+    count = 0 # current amount of questions asked 
+    selected = random.sample(list(kata_both.items()), num_ques)
+    for index, (jp, en) in enumerate(selected, start=1):
+        while True:                                            # loop till right answer
+            answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
+            if answer == en:
+                print("Correct")
+                right += 1             # to later implement rating 
+                break
+            elif answer == "skip":
+                print("Skipping")        # later add score penalty will be applied to message
+                wrong += 1
+                break
+            elif answer == "quit":
+                exit()
+            else:
+                print("Try again")
+                wrong += 1
 def katakana_kana():
     kata_kana = kata_main | kata_dakuten | kata_combi
 def hira_and_kata():
