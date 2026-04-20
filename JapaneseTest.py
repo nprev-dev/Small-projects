@@ -363,6 +363,33 @@ def katakana_kana():
                 wrong += 1
 def hira_and_kata():
     hira_nd_kata = hira_main | hira_dakuten | hira_combi | kata_main | kata_dakuten | kata_combi
+    while True:
+        num_ques = num_questions()
+        if num_ques > len(hira_nd_kata):
+            print(f"Number is bigger than question pool, enter a number between 1 and {len(hira_nd_kata)}.")
+            continue
+        elif num_ques <= len(hira_nd_kata):
+            break
+    wrong = 0 # nb wrong answer
+    right = 0 # nb right answer
+    count = 0 # current amount of questions asked 
+    selected = random.sample(list(hira_nd_kata.items()), num_ques)
+    for index, (jp, en) in enumerate(selected, start=1):
+        while True:                                            # loop till right answer
+            answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
+            if answer == en:
+                print("Correct")
+                right += 1             # to later implement rating 
+                break
+            elif answer == "skip":
+                print("Skipping")        # later add score penalty will be applied to message
+                wrong += 1
+                break
+            elif answer == "quit":
+                exit()
+            else:
+                print("Try again")
+                wrong += 1
 def stop_prog():
     print("Stopping program!")
     exit()
