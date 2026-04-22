@@ -107,7 +107,7 @@ def hiragana_gojūon():
             else:
                 print("Try again")
                 wrong += 1
-    print_results(right, wrong)
+    show_results(right, wrong)
 def hiragana_dakuten():
     while True:
         num_ques = num_questions()
@@ -136,6 +136,7 @@ def hiragana_dakuten():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def hiragana_combi():
     while True:
         num_ques = num_questions()
@@ -164,6 +165,7 @@ def hiragana_combi():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def hiragana_both():
     hira_both = hira_main | hira_dakuten
     while True:
@@ -193,6 +195,7 @@ def hiragana_both():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def hiragana_kana():
     hira_kana = hira_main | hira_dakuten | hira_combi
     while True:
@@ -222,6 +225,7 @@ def hiragana_kana():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def katakana_gojūon():
     while True:
         num_ques = num_questions()
@@ -250,6 +254,7 @@ def katakana_gojūon():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def katakana_dakuten():
     while True:
         num_ques = num_questions()
@@ -278,6 +283,7 @@ def katakana_dakuten():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def katakana_combi():
     while True:
         num_ques = num_questions()
@@ -306,6 +312,7 @@ def katakana_combi():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def katakana_both():
     kata_both = kata_main | kata_dakuten
     while True:
@@ -335,6 +342,7 @@ def katakana_both():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def katakana_kana():
     kata_kana = kata_main | kata_dakuten | kata_combi
     while True:
@@ -364,6 +372,7 @@ def katakana_kana():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def hira_and_kata():
     hira_nd_kata = hira_main | hira_dakuten | hira_combi | kata_main | kata_dakuten | kata_combi
     while True:
@@ -393,6 +402,7 @@ def hira_and_kata():
             else:
                 print("Try again")
                 wrong += 1
+    show_results(right, wrong)
 def stop_prog():
     print("Stopping program!")
     exit()
@@ -486,7 +496,7 @@ def num_questions():
         
         return num_question
 # ---------- Check Grade ---------- #
-def print_results(right, wrong):
+def show_results(right, wrong):
     total_answers = right + wrong
     accuracy = (right / total_answers) * 100 if total_answers > 0 else 0
 
@@ -494,7 +504,7 @@ def print_results(right, wrong):
     print(f"Right: {right}")
     print(f"Wrong: {wrong}")
     print(f"Accuracy: {accuracy:.2f}%")
-    
+
 # ---------- Check History ---------- #
 def check_hist():
     if not history:
