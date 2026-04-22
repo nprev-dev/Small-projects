@@ -107,6 +107,7 @@ def hiragana_gojūon():
             else:
                 print("Try again")
                 wrong += 1
+    print_results(right, wrong)
 def hiragana_dakuten():
     while True:
         num_ques = num_questions()
@@ -484,7 +485,16 @@ def num_questions():
             continue
         
         return num_question
+# ---------- Check Grade ---------- #
+def print_results(right, wrong):
+    total_answers = right + wrong
+    accuracy = (right / total_answers) * 100 if total_answers > 0 else 0
 
+    print("\n--- Results ---")
+    print(f"Right: {right}")
+    print(f"Wrong: {wrong}")
+    print(f"Accuracy: {accuracy:.2f}%")
+    
 # ---------- Check History ---------- #
 def check_hist():
     if not history:
