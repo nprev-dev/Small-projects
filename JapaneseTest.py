@@ -404,6 +404,15 @@ def hira_and_kata():
                 print("Try again")
                 wrong += 1
     show_results(right, wrong)
+# ---------- Check History ---------- #
+def check_hist():
+    if not history:
+        print("No available history.")
+        return
+    # tmr make it print quiz name with a number
+    #for i, h in enumerate(history, 1):
+        #print(f"{i}) {h['operation']} | {h['inputs']} -> {h['result']}")
+    print(history)
 def stop_prog():
     print("Stopping program!")
     exit()
@@ -476,6 +485,10 @@ question_choice = {
         "log": True
     },
     "4": {
+        "name": "Check history",
+        "worker": check_hist
+    },
+    "5": {
         "name": "Quit",
         "worker": stop_prog
     }
@@ -520,36 +533,30 @@ def show_results(right, wrong):
     add_history(result)
     return result
 
-# ---------- Check History ---------- #
-def check_hist():
-    if not history:
-        print("No available history.")
-        return
-
-    #for i, h in enumerate(history, 1):
-        #print(f"{i}) {h['operation']} | {h['inputs']} -> {h['result']}")
-
 # ---------- Menu loop ---------- #  
 def ask_menu(question_choice):
+    current_menu = question_choice
+
     while True:
         print("\n--- Japanese Quiz ---")
-        for key, value in question_choice.items():
+        for key, value in current_menu.items():
             print(f"{key}. {value['name']}")
 
         choice = input("What do you want? ").strip()
-        selected = question_choice.get(choice)
+        selected = current_menu.get(choice)
 
         if selected is None:
             print("Invalid choice, try again.")
             continue
 
         if "options" in selected:       # if option exist, dig deeper in nested dict and ask 
-            ask_menu(selected["options"])
+            current_menu = selected["options"]
             continue
 
         worker = selected.get("worker")
         if callable(worker):
             worker()
+            current_menu = question_choice
             continue
 ask_menu(question_choice)  
 #
