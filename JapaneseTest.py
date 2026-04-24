@@ -411,7 +411,7 @@ def check_hist():
         return
     # tmr make it print quiz name with a number
     print("\n--- History ---")
-    for i, h in enumerate(history, 1):
+    for i, h in enumerate(history, 1): # takes history list and shapes it in non gibberish
         print(f"{i}) Right: {h['right']} | Wrong: {h['wrong']} | Accuracy: {h['accuracy']:.2f}%")
     
 def stop_prog():
@@ -513,7 +513,7 @@ def num_questions():
 
 # ---------- Add history ---------- #
 def add_history(result):
-    history.append(result)
+    history.append(result) # adds result dict to history list
     
 # ---------- Check Grade ---------- #
 def show_results(right, wrong):
@@ -531,7 +531,7 @@ def show_results(right, wrong):
     print(f"Wrong: {wrong}")
     print(f"Accuracy: {accuracy:.2f}%")
 
-    add_history(result)
+    add_history(result) # gives add_history the result dict
     return result
 
 # ---------- Menu loop ---------- #  
