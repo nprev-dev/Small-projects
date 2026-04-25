@@ -108,7 +108,7 @@ def hiragana_gojūon():
             else:
                 print("Try again")
                 wrong += 1
-    show_results(right, wrong)
+    show_results("All Hiragana Gojūon", right, wrong)
 def hiragana_dakuten():
     while True:
         num_ques = num_questions()
@@ -412,6 +412,7 @@ def check_hist():
     # tmr make it print quiz name with a number
     print("\n--- History ---")
     for i, h in enumerate(history, 1): # takes history list and shapes it in non gibberish
+        print(f" --- {h['name']} ---")
         print(f"{i}) Right: {h['right']} | Wrong: {h['wrong']} | Accuracy: {h['accuracy']:.2f}%")
     
 def stop_prog():
@@ -516,11 +517,12 @@ def add_history(result):
     history.append(result) # adds result dict to history list
     
 # ---------- Check Grade ---------- #
-def show_results(right, wrong):
+def show_results(name, right, wrong):
     total_answers = right + wrong
     accuracy = (right / total_answers) * 100 if total_answers > 0 else 0
 
     result = {
+        "name": name,
         "right": right,
         "wrong": wrong,
         "accuracy": accuracy
