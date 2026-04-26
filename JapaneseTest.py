@@ -487,10 +487,16 @@ question_choice = {
         "log": True
     },
     "4": {
+        "name": "Curriculum",
+        "options": {
+
+        }
+    },
+    "5": {
         "name": "Check history",
         "worker": check_hist
     },
-    "5": {
+    "6": {
         "name": "Quit",
         "worker": stop_prog
     }
