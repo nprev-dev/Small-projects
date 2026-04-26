@@ -489,6 +489,16 @@ question_choice = {
     "4": {
         "name": "Curriculum",
         "options": {
+            "1": {
+                "name": "Small tsu",
+                "worker": None,
+                "log": False
+            },
+            "2": {
+                "name": "Long vowels",
+                "worker": None,
+                "log": False
+            }
 
         }
     },
