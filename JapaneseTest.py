@@ -404,6 +404,11 @@ def hira_and_kata():
                 print("Try again")
                 wrong += 1
     show_results("All Hiragana & Katakana", right, wrong)
+def curr_smalltsu():
+    pass
+def stop_prog():
+    print("Stopping program!")
+    exit()
 # ---------- Check History ---------- #
 def check_hist():
     if not history:
@@ -414,10 +419,6 @@ def check_hist():
     for i, h in enumerate(history, 1): # takes history list and shapes it in non gibberish
         print(f" -- {h['name']} --")
         print(f"{i}) Right: {h['right']} | Wrong: {h['wrong']} | Accuracy: {h['accuracy']:.2f}%")
-    
-def stop_prog():
-    print("Stopping program!")
-    exit()
 
 # ---------- Choice select -------- #
 question_choice = {
@@ -491,7 +492,7 @@ question_choice = {
         "options": {
             "1": {
                 "name": "Small tsu",
-                "worker": None,
+                "worker": curr_smalltsu,
                 "log": False
             },
             "2": {
