@@ -517,6 +517,11 @@ question_choice = {
     "5": {
         "name": "Curriculum questionaire",
         "options": {
+            "1": {
+                "name": "Small tsu quiz 1",
+                "worker": None,
+                "log": True
+            }
 
         }
     },
