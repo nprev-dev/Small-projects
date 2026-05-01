@@ -79,7 +79,12 @@ kata_combi = {
     "リャ": "rya", "リョ": "ryo", "リュ": "ryu"  # R row
 }
 stsu_ques = {
-
+    "がっこう": "gakkou", "きっさてん": "kissaten", "ざっし": "zasshi",   # (school),(cafe/coffee shop),(magazine)
+    "きっぷ": "kippu", "きって": "kitte", "せっけん": "sekken",           # (ticket),(stamp),(soap)
+    "ベッド": "beddo", "コップ": "koppu", "バッグ": "baggu",              # (bed),(cup),(bag)
+    "カップ": "kappu", "マッチ": "macchi", "きっちん": "kicchin",         # (cup),(match),(kitchen)
+    "ロッカー": "rokkaa", "チケット": "chiketto", "カッター": "kattaa",   # (locker),(ticket),(cutter)
+    "ボックス": "bokkusu", "カップめん": "kappumen"                       # (box),(cup noodles)
 }
 
 # ---------- Workers ---------- #
@@ -96,10 +101,10 @@ def hiragana_gojūon():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(hira_main.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -125,10 +130,10 @@ def hiragana_dakuten():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(hira_dakuten.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -154,10 +159,10 @@ def hiragana_combi():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(hira_combi.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -184,10 +189,10 @@ def hiragana_both():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(hira_both.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -214,10 +219,10 @@ def hiragana_kana():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(hira_kana.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -243,10 +248,10 @@ def katakana_gojūon():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(kata_main.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -272,10 +277,10 @@ def katakana_dakuten():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(kata_dakuten.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -301,10 +306,10 @@ def katakana_combi():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(kata_combi.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -331,10 +336,10 @@ def katakana_both():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(kata_both.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -361,10 +366,10 @@ def katakana_kana():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(kata_kana.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
@@ -391,10 +396,10 @@ def hira_and_kata():
     right = 0 # nb right answer
     count = 0 # current amount of questions asked 
     selected = random.sample(list(hira_nd_kata.items()), num_ques)
-    for index, (jp, en) in enumerate(selected, start=1):
+    for index, (jp, ro) in enumerate(selected, start=1):
         while True:                                            # loop till right answer
             answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
-            if answer == en:
+            if answer == ro:
                 print("Correct")
                 right += 1             # to later implement rating 
                 break
