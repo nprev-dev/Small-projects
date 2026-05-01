@@ -422,6 +422,7 @@ def curr_smalltsu():
         smalltsu_ques = input("Do you wanna take a small quiz to test your knowledge? (Yes/no): ")
         if smalltsu_ques.strip().lower() == "yes":
             smalltsu_question()
+            return
         elif smalltsu_ques.strip().lower() == "no":
             return
         else:
@@ -429,7 +430,7 @@ def curr_smalltsu():
             continue
 
 def smalltsu_question():
-    input("In this questionnaire, you will translate word containing small tsu from japanese to its romaji.\nPress enter to continue..")
+    input("\nIn this questionnaire, you will translate word containing small tsu from japanese to its romaji.\nPress enter to continue..")
     while True:
         num_ques = num_questions()
         if num_ques > len(stsu_ques): 
@@ -440,6 +441,23 @@ def smalltsu_question():
     wrong = 0 # nb wrong answer
     right = 0 # nb right answer
     selected = random.sample(list(stsu_ques.items()), num_ques) 
+    for index, (jp, ro) in enumerate(selected, start=1):
+        while True:                                            # loop till right answer
+            answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
+            if answer == ro:
+                print("Correct")
+                right += 1             # to later implement rating 
+                break
+            elif answer == "skip":
+                print("Skipping")        # later add score penalty will be applied to message
+                wrong += 1
+                break
+            elif answer == "quit":
+                exit()
+            else:
+                print("Try again")
+                wrong += 1
+    show_results("Small tsu question", right, wrong)
     
 def stop_prog():
     print("Stopping program!")
