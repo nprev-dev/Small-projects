@@ -428,7 +428,6 @@ def curr_smalltsu():
         else:
             print("Choice needs to be either yes or no.")
             continue
-
 def smalltsu_question():
     input("\nIn this questionnaire, you will translate word containing small tsu from japanese to its romaji.\nPress enter to continue..")
     while True:
@@ -458,6 +457,10 @@ def smalltsu_question():
                 print("Try again")
                 wrong += 1
     show_results("Small tsu question", right, wrong)
+def curr_longvowel():
+    pass
+def longvowel_question():
+    pass
     
 def stop_prog():
     print("Stopping program!")
@@ -550,7 +553,7 @@ question_choice = {
             },
             "2": {
                 "name": "Long vowels",
-                "worker": None,
+                "worker": curr_longvowel,
                 "log": False
             },
             "3": {
@@ -572,6 +575,11 @@ question_choice = {
             "1": {
                 "name": "Small tsu quiz 1",
                 "worker": smalltsu_question,
+                "log": True
+            },
+            "2":{
+                "name": "Long vowel quiz 1",
+                "worker": longvowel_question,
                 "log": True
             }
 
