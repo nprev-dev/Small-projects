@@ -3,3 +3,4 @@ Features:
 - All Hiragana & Katakana + practice exercises
 - All Combinations + practice exercises
 - Basic grammar rules and more coming soon.
+Future improvements are commented at the top of the 
