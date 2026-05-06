@@ -458,7 +458,8 @@ def smalltsu_question():
                 wrong += 1
     show_results("Small tsu question", right, wrong)
 def curr_longvowel():
-    pass
+    input("The long vowel, a long vowel is a character in japanese that extends the pronounciation length of a vowel sound.\nPress enter to continue..")
+    input("The long vowel is often written using an extra vowel and a long vowel mark(ー).\nPress enter to continue..")
 def longvowel_question():
     pass
     
