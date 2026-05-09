@@ -461,8 +461,18 @@ def curr_longvowel():
     input("The long vowel, a long vowel is a character in japanese that extends the pronounciation length of a vowel sound.\nPress enter to continue..")
     input("The long vowel is often written using an extra vowel and a long vowel mark(ー).\nPress enter to continue..")
     input("For example, スーパー(suupaa) in romaji, means store. As you can see the long vowel here doubles the vowels.\nPress enter to continue..")
+    while True:
+        longvowel_ques = input("Do you wanna take a small quiz to test your knowledge? (Yes/no): ")
+        if longvowel_ques.strip().lower() == "yes":
+            longvowel_question()
+            return
+        elif longvowel_ques.strip().lower() == "no":
+            return
+        else:
+            print("Choice needs to be either yes or no.")
+            continue
 def longvowel_question():
-    pass
+    print("here")
     
 def stop_prog():
     print("Stopping program!")
