@@ -86,6 +86,15 @@ stsu_ques = {
     "ロッカー": "rokkaa", "チケット": "chiketto", "カッター": "kattaa",   # (locker),(ticket),(cutter)
     "ボックス": "bokkusu", "カップめん": "kappumen"                       # (box),(cup noodles)
 }
+long_vowel_ques = {
+    "スーパー": "suupaa", "ケーキ": "keeki", "コーヒー": "koohii",          # (supermarket), (cake), (coffee)
+    "おばあさん": "obaasan", "おじいさん": "ojiisan", "せんせい": "sensei", # (grandmother), (grandfather), (teacher)
+    "とけい": "tokei", "えいが": "eiga", "がくせい": "gakusei",            # (clock/watch), (movie), (student)
+    "びょういん": "byouin", "りょうり": "ryouri", "きょう": "kyou",        # (hospital), (cooking), (today)
+    "とうきょう": "toukyou", "おおきい": "ookii", "おねえさん": "oneesan", # (Tokyo), (big), (older sister)
+    "ゆうめい": "yuumei", "くうこう": "kuukou", "でんわ": "denwa",         # (famous), (airport), (telephone)
+    "メール": "meeru", "ゲーム": "geemu", "チーズ": "chiizu"              # (email), (game), (cheese)
+}
 
 # ---------- Workers ---------- #
 
