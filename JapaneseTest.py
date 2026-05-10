@@ -87,13 +87,13 @@ stsu_ques = {
     "ボックス": "bokkusu", "カップめん": "kappumen"                       # (box),(cup noodles)
 }
 long_vowel_ques = {
-    "スーパー": "suupaa", "ケーキ": "keeki", "コーヒー": "koohii",          # (supermarket), (cake), (coffee)
-    "おばあさん": "obaasan", "おじいさん": "ojiisan", "せんせい": "sensei", # (grandmother), (grandfather), (teacher)
-    "とけい": "tokei", "えいが": "eiga", "がくせい": "gakusei",            # (clock/watch), (movie), (student)
-    "びょういん": "byouin", "りょうり": "ryouri", "きょう": "kyou",        # (hospital), (cooking), (today)
-    "とうきょう": "toukyou", "おおきい": "ookii", "おねえさん": "oneesan", # (Tokyo), (big), (older sister)
-    "ゆうめい": "yuumei", "くうこう": "kuukou", "でんわ": "denwa",         # (famous), (airport), (telephone)
-    "メール": "meeru", "ゲーム": "geemu", "チーズ": "chiizu"              # (email), (game), (cheese)
+    "スーパー": "suupaa", "ケーキ": "keeki", "コーヒー": "koohii",            # (supermarket), (cake), (coffee)
+    "ジュース": "juusu", "チーズ": "chiizu", "メール": "meeru",              # (juice), (cheese), (email)
+    "ゲーム": "geemu", "ノート": "nooto", "スカート": "sukaato",             # (game), (notebook), (skirt)
+    "タクシー": "takushii", "プール": "puuru", "ルール": "ruuru",            # (taxi), (pool), (rule)
+    "セーター": "seetaa", "エレベーター": "erebeetaa", "カレー": "karee",    # (sweater), (elevator), (curry)
+    "コンピューター": "konpyuutaa", "スキー": "sukii", "コピー": "kopii",    # (computer), (skiing), (copy)
+    "パーティー": "paatii", "ミュージック": "myuujikku", "トレーナー": "torenaa" # (party), (music), (trainer)
 }
 
 # ---------- Workers ---------- #
