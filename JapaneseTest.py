@@ -1,10 +1,9 @@
 import random
 # to add later:
 # - Add linguo help (gojūon, kana, hiragana katakana and etc)
-# - History system
-# - Grade system (in %) and maybe show mistakes
+# - Grade system maybe show mistakes
 # - chose how many questions u want (with an all option)
-# - Add grammar rules (small tsu, long vowels, combination explication etc, maybe later add tips on how to learn)
+# - Add grammar rules combination explication etc, maybe later add tips on how to learn)
 # - Grammar to add: , combi rules,
 # - add many small learning chunks. Like verbs 1, 2, 3 etc, places 1, 2, 3 and more for objects topics and more
 # - add learning guides and info for JLPT 5, 4, 3, 2, 1 etc
