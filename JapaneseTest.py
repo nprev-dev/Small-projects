@@ -481,7 +481,34 @@ def curr_longvowel():
             print("Choice needs to be either yes or no.")
             continue
 def longvowel_question():
-    print("here")
+    input("\nIn this questionnaire, you will translate word containing long vowels from japanese to its romaji.\nPress enter to continue..")
+    while True:
+        num_ques = num_questions()
+        if num_ques > len(long_vowel_ques): 
+            print(f"Number is bigger than question pool, enter a number between 1 and {len(long_vowel_ques)}.") 
+            continue
+        elif num_ques <= len(long_vowel_ques): 
+            break
+    wrong = 0 # nb wrong answer
+    right = 0 # nb right answer
+    selected = random.sample(list(long_vowel_ques.items()), num_ques) 
+    for index, (jp, ro) in enumerate(selected, start=1):
+        while True:                                            # loop till right answer
+            answer = input(f"{index}. {jp}: ").strip().lower() #removes whitespaces and puts in lowercase
+            if answer == ro:
+                print("Correct")
+                right += 1             # to later implement rating 
+                break
+            elif answer == "skip":
+                print("Skipping")        # later add score penalty will be applied to message
+                wrong += 1
+                break
+            elif answer == "quit":
+                exit()
+            else:
+                print("Try again")
+                wrong += 1
+    show_results("Long vowels question", right, wrong)
     
 def stop_prog():
     print("Stopping program!")
