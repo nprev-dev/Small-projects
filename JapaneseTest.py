@@ -509,6 +509,8 @@ def longvowel_question():
                 print("Try again")
                 wrong += 1
     show_results("Long vowels question", right, wrong)
+def curr_particles():
+    pass
     
 def stop_prog():
     print("Stopping program!")
@@ -606,7 +608,7 @@ question_choice = {
             },
             "3": {
                 "name": "Particles",
-                "worker": None,
+                "worker": curr_particles,
                 "log": False
             },
             "4": {
