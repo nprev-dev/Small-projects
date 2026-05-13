@@ -509,7 +509,9 @@ def longvowel_question():
                 wrong += 1
     show_results("Long vowels question", right, wrong)
 def curr_particles():
-    pass
+    input("Particles, particles are small words in Japanese that show the role of a word in a sentence.\nPress enter to continue..")
+    input("For example, は marks the topic, を marks the object, and で marks where an action happens.\nPress enter to continue..")
+    input("For example, わたしはパンをたべる(watashi wa pan o taberu), means I eat bread. は shows the topic and を shows what is being eaten.\nPress enter to continue..")
     
 def stop_prog():
     print("Stopping program!")
